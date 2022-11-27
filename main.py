@@ -25,9 +25,10 @@ propArr = [eyeColor, furLength, Shirt, Pants, Accessories]
 #names of the categories that will be printed out
 varNames = ['Eye Color', 'Fur Length', 'Shirt', 'Pants', 'Accessories']
 
-client = discord.Client(intents=discord.Intents.default())
+intents = discord.Intents.default()
+intents.message_content = True
 
-TOKEN = 'MTA0NjQ0NTIwNDU1Njc1MDg4OA.GSL9Lf.eomkA4iBgz7JN5nY6q2ZoFV0eKLqi_HRUWXOmM'
+client = discord.Client(intents=intents)
 
 async def makeGieeg(messages):
     varNameIndex = 0
@@ -77,4 +78,4 @@ async def on_message(message):
     if message.content.lower() == '!creategieeg':
         await makeGieeg(message)
 
-client.run(TOKEN)
+client.run(os.getenv("TOKEN"))

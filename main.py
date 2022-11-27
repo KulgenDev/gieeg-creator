@@ -26,7 +26,6 @@ propArr = [eyeColor, furLength, Shirt, Pants, Accessories]
 varNames = ['Eye Color', 'Fur Length', 'Shirt', 'Pants', 'Accessories']
 
 intents = discord.Intents.default()
-intents.message_content = True
 
 client = discord.Client(intents=intents)
 

@@ -25,9 +25,7 @@ propArr = [eyeColor, furLength, Shirt, Pants, Accessories]
 #names of the categories that will be printed out
 varNames = ['Eye Color', 'Fur Length', 'Shirt', 'Pants', 'Accessories']
 
-intents = discord.Intents.default()
-
-client = discord.Client(intents=intents)
+client = discord.Client(intents=discord.Intents.all())
 
 async def makeGieeg(messages):
     varNameIndex = 0

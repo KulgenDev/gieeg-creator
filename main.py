@@ -27,6 +27,8 @@ varNames = ['Eye Color', 'Fur Length', 'Shirt', 'Pants', 'Accessories']
 
 client = discord.Client(intents=discord.Intents.default())
 
+TOKEN = 'MTA0NjQ0NTIwNDU1Njc1MDg4OA.GSL9Lf.eomkA4iBgz7JN5nY6q2ZoFV0eKLqi_HRUWXOmM'
+
 async def makeGieeg(messages):
     varNameIndex = 0
     categoryName = varNames[varNameIndex]
@@ -75,4 +77,4 @@ async def on_message(message):
     if message.content.lower() == '!creategieeg':
         await makeGieeg(message)
 
-client.run(os.getenv("TOKEN"))
+client.run(TOKEN)
